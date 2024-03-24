@@ -18,24 +18,6 @@ class invoice
     {
         $db = new connect();
         $query = "insert into invoicedetails(invoice_id,product_id,quantity,total) values($invoice_id,$product_id,$quantity,$total)";
-        // $sql = "INSERT INTO invoicedetails (invoice_id, customer_id, quantity, total) VALUES (?, ?, ?, ?)";
-        // // Sử dụng prepared statement
-        // if ($stmt = $db->execP($sql)) {
-        //     // Gán giá trị vào các tham số
-        //     $stmt->bind_param("iiid", $invoice_id, $customer_id, $quantity, $total);
-        //     // Thiết lập giá trị cho các biến
-        //     $invoice_id = $your_invoice_id; // Giá trị thực của invoice_id
-        //     $customer_id = $your_customer_id; // Giá trị thực của customer_id
-        //     $quantity = $your_quantity; // Giá trị thực của quantity
-        //     $total = $your_total; // Giá trị thực của total
-        //     // Thực thi truy vấn
-        //     $stmt->execute();
-        //     // Đóng prepared statement
-        //     $stmt->close();
-        // } else {
-        //     // Xử lý lỗi nếu prepare không thành công
-        //     echo "Lỗi: " . $mysqli->error;
-        // }
         $db->exec($query);
     }
     function updateInvoicesSubtotal($invoice_id,$custommer_id,$subtotal){

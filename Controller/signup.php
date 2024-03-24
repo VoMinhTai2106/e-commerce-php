@@ -64,14 +64,20 @@ switch ($act) {
             $_SESSION['user']['customer_id'] = $logkh['customer_id'];
             $_SESSION['user']['customer_name'] = $logkh['customer_name'];
             echo '<script> alert("Đăng nhập thành công"); </script>';
-            if (!isset($_SESSION['cart'])) {
+            if (!isset($_SESSION['cart'])) {  
                 echo '<meta http-equiv="refresh" content="0;url=./index.php?action=home"/>';
             }else{
                 echo '<meta http-equiv="refresh" content="0;url=./index.php?action=checkout"/>';
             }
         } else {
-            echo '<script> alert("Đăng nhập không thành công"); </script>';
-            echo '<meta http-equiv="refresh" content="0;url=./index.php?action=signup"/>';
+            $logAdmin= $kh->logAdmin($user, $pass);
+            if ($logAdmin) {
+                $_SESSION['admin']['adminId']=$logAdmin['id'];
+                echo '<meta http-equiv="refresh" content="0;url=./Admin/index.php"/>';
+            }else{
+                echo '<script> alert("Đăng nhập không thành công"); </script>';
+                echo '<meta http-equiv="refresh" content="0;url=./index.php?action=signup"/>';
+            }
         }
     }
         break;

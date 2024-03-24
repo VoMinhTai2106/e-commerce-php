@@ -3,7 +3,6 @@
         function insertReview($customer_id,$product_id,$review_title,$review_content){
             $db=new connect();
             $query="insert into review(id,customer_id,product_id,review_title,review_content) values(NULL,$customer_id,$product_id,'$review_title','$review_content')";
-            echo $query;
             $db->exec($query);
         }
         function selectReview($product_id){

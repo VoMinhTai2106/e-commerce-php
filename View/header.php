@@ -4,7 +4,6 @@
             <div class="header-left">
                 <a href="tel:#"><i class="icon-phone"></i>Call: +0123 456 789</a>
             </div><!-- End .header-left -->
-
             <div class="header-right">
 
                 <ul class="top-menu">
@@ -52,7 +51,6 @@
                             }
                             ?>
 
-                            <!-- href="#signin-modal" data-toggle="modal" -->
                         </ul>
                     </li>
                 </ul><!-- End .top-menu -->
@@ -114,15 +112,6 @@
                     </div><!-- End .dropdown-menu -->
                 </div><!-- End .compare-dropdown -->
 
-                <div class="wishlist">
-                    <a href="wishlist.html" title="Wishlist">
-                        <div class="icon">
-                            <i class="icon-heart-o"></i>
-                            <span class="wishlist-count badge">3</span>
-                        </div>
-                        <p>Wishlist</p>
-                    </a>
-                </div><!-- End .compare-dropdown -->
 
                 <div class="dropdown cart-dropdown">
                     <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
@@ -192,12 +181,12 @@
                     <div class="dropdown-menu">
                         <nav class="side-nav">
                             <ul class="menu-vertical sf-arrows">
-                                <li><a href="#">Smartphone</a></li>
-                                <li><a href="#">Laptop & Computer</a></li>
-                                <li><a href="#">Smart Watch </a></li>
-                                <li><a href="#">Audio</a></li>
-                                <li><a href="#">Digital Camera</a></li>
-                                <li><a href="#">TV </a></li>
+                                <li><a href="index.php?action=category">Smartphone</a></li>
+                                <li><a href="index.php?action=category">Laptop & Computer</a></li>
+                                <li><a href="index.php?action=category">Smart Watch </a></li>
+                                <li><a href="index.php?action=category">Audio</a></li>
+                                <li><a href="index.php?action=category">Digital Camera</a></li>
+                                <li><a href="index.php?action=category">TV </a></li>
                             </ul><!-- End .menu-vertical -->
                         </nav><!-- End .side-nav -->
                     </div><!-- End .dropdown-menu -->

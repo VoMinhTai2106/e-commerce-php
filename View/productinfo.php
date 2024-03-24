@@ -98,11 +98,6 @@ $reviewQty = $review->countReviews($result['product_id']);
 
                                 <div class="product-details-action">
                                     <button type="submit" href="#" class="btn-product btn-cart"><span>add to cart</span></button>
-
-                                    <div class="details-action-wrapper">
-                                        <a href="#" class="btn-product btn-wishlist" title="Wishlist"><span>Add to Wishlist</span></a>
-                                        <a href="#" class="btn-product btn-compare" title="Compare"><span>Add to Compare</span></a>
-                                    </div><!-- End .details-action-wrapper -->
                                 </div><!-- End .product-details-action -->
 
                                 <div class="product-details-footer">

@@ -23,11 +23,12 @@ switch ($act) {
                 $subtotal += $item['last_price'];
                 $invoice->updateQuantity($invoice_id,$item['id']);
             }
+
             $invoice->updateInvoicesSubtotal($invoice_id, $customer_id, $subtotal);
             echo '<script>alert(Order successful) </script>';
             echo '<meta http-equiv="refresh" content="0;url=index.php?action=home"/>';
             $_SESSION['cart']=[];
-        }
+        }   
 
         break;
     default:

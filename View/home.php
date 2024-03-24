@@ -250,7 +250,7 @@
                     while ($set = $result->fetch()) :
                     ?>
                         <div class="product product-2">
-                            <figure class="product-media">
+                            <figure class="product-media" ">
                                 <a href="index.php?action=productinfo&id=<?php echo $set['product_id'];?>&category_id=<?php echo $set['category_id'];?>">
                                     <img src="./content/images/products/<?php echo $set['default_image_path'];?>" alt="Product image" class="product-image">
                                 </a>
@@ -265,7 +265,7 @@
                                 </div><!-- End .product-action -->
                             </figure><!-- End .product-media -->
 
-                            <div class="product-body">
+                            <div class="product-body" >
                                 <div class="product-cat">
                                     <a href="#"><?php echo $set['category_name'] ?></a>
                                 </div><!-- End .product-cat -->
@@ -986,3 +986,47 @@
         </div><!-- End .container -->
     </div><!-- End .icon-boxes-container -->
 </main>
+<style>
+   .product {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e5e5e5;
+    max-width: 300px; /* Đặt kích thước tối đa cho sản phẩm */
+}
+
+.product-media {
+    flex: 1; /* Phần chứa ảnh mở rộng để lấp đầy không gian trống */
+    overflow: hidden; /* Ẩn phần thừa của ảnh nếu nó vượt ra khỏi kích thước đã định */
+    position: relative;
+}
+
+.product-image {
+    width: 100%;
+    height: auto; /* Đảm bảo ảnh không bị méo khi thay đổi kích thước */
+    display: block;
+}
+
+.product-body {
+
+    flex: 1; /* Phần thông tin sản phẩm mở rộng để lấp đầy không gian trống */
+    display: flex;
+    flex-direction: column;
+}
+
+.product-cat {
+    margin-bottom: 2px; /* Khoảng cách giữa danh mục và tiêu đề sản phẩm */
+}
+
+.product-title {
+    margin-bottom: 2px; /* Khoảng cách giữa tiêu đề và giá sản phẩm */
+}
+
+.product-price {
+    margin-bottom: 2px; /* Khoảng cách giữa giá và text rating */
+}
+
+.ratings-container {
+    margin-top: auto; /* Duy trì khoảng cách giữa text rating và bottom */
+}
+
+</style>

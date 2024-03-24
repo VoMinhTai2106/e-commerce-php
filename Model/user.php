@@ -29,4 +29,10 @@ class user {
         $result = $db->getInstance($select);
         return $result;
     }
+    function logAdmin($username,$password){
+        $db= new connect();
+        $select = 'select * from users WHERE username="' . $username . '" and password="' . $password . '"';
+        $result = $db->getInstance($select);
+        return $result;
+    }
 }
